@@ -10,10 +10,18 @@
 <!--     
    <!- Latest compiled and minified CSS & JS -->
   
-   <script src="https://code.jquery.com/jquery.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+ 
 
+
+   <link rel="stylesheet" href="/path/to/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" href="/path/to/dist/css/bootstrapValidator.min.css"/>
+
+<script type="text/javascript" src="/path/to/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/path/to/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
    
 </head>
 
@@ -21,7 +29,6 @@
     <style>
 
         body {
-            background-image: url("/light_grey.png");
             background-color: lightgray;
         }
         .jumbotron {
@@ -90,7 +97,7 @@
                     <div class="col-md-5">
 
                         <p>1) You are laidback.</p>
-                        <select class="form-control select-data" id="response0">
+                        <select class="form-control select-data" id="response0" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -100,7 +107,7 @@
                         </select>
                         <br>
                         <p>2) You have a great sense of humor.</p>
-                        <select class="form-control select-data" id="response1">
+                        <select class="form-control select-data" id="response1" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -110,7 +117,7 @@
                         </select>
                         <br>
                         <p>3) You enjoy traveling.</p>
-                        <select class="form-control select-data" id="response2">
+                        <select class="form-control select-data" id="response2" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -120,7 +127,7 @@
                         </select>
                         <br>
                         <p>4) You consider yourself to be shy.</p>
-                        <select class="form-control select-data" id="response3">
+                        <select class="form-control select-data" id="response3" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -130,7 +137,7 @@
                         </select>
                         <br>
                         <p>5) You are established in your career.</p>
-                        <select class="form-control select-data" id="response4">
+                        <select class="form-control select-data" id="response4" required>
                              <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -140,10 +147,10 @@
                         </select>
                         <br>
                     </div>
-                    <div class="col-md-1"></div>
+                    <div class="col-md-2"></div>
                     <div class="col-md-5">
                         <p>6) You are open-minded.</p>
-                        <select class="form-control select-data" id="response5">
+                        <select class="form-control select-data" id="response5" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -153,7 +160,7 @@
                         </select>
                         <br>
                         <p>7) You like attending sporting events.</p>
-                        <select class="form-control select-data" id="response6">
+                        <select class="form-control select-data" id="response6" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -163,7 +170,7 @@
                         </select>
                         <br>
                         <p>8) You enjoy outdoor activities and exercise.</p>
-                        <select class="form-control select-data" id="response7">
+                        <select class="form-control select-data" id="response7" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -173,7 +180,7 @@
                         </select>
                         <br>
                         <p>9) You enjoy going to lectures and museums.</p>
-                        <select class="form-control select-data" id="response8">
+                        <select class="form-control select-data" id="response8" required>
                              <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -183,7 +190,7 @@
                         </select>
                         <br>
                         <p>10) You enjoy going to restaurants and bars.</p>
-                        <select class="form-control select-data" id="response9">
+                        <select class="form-control select-data" id="response9" required>
                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -224,13 +231,13 @@
 
 
                 <script type="text/javascript">  
-                $(document).ready(function() {
+            
 
 
       // Form validation code will come here.
   
 
-                    //function to disable <Enter key> from submitting form 
+                    //function to disable <Enter key> from submitting form before all data is entered
 
                     function stopRKey(evt) {
                         var evt = (evt) ? evt : ((event) ? event : null);
@@ -241,16 +248,7 @@
                     document.onkeypress = stopRKey;
 
                     //validate form to make sure name and photo entered
-
-                    
-
-                    //Code to save responses from form, post data, show modal with match on click
-                    var scoreArray = []
-
-                    $("#submit-btn").on("click", function (event) {
-                        event.preventDefault();
-
-
+                    $(document).ready(function () {
 
                                 // $('#surveyForm').validate({
                                 //         errorClass: "error",
@@ -266,6 +264,17 @@
                                 //         }
                                         
                                 //         })  
+
+                    
+
+                    //Code to save responses from form, post data, show modal with match on click
+                    var scoreArray = []
+
+                    $("#submit-btn").on("click", function (event) {
+                        event.preventDefault();
+
+
+
                         
 
                         //Store select values in an array
@@ -386,7 +395,7 @@
                         $('#matchName').text(matchMate);
                         $("#matchPic").attr("src", matchPic);
                     }
-})
+                })
                 </script>
             
 
