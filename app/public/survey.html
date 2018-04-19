@@ -7,34 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find a Friend</title>
 
-    <!-- Latest compiled and minified CSS -->
+    
+   <!-- Latest compiled and minified CSS & JS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
    
 </head>
 
 <body>
     <style>
+
+        body {
+            background-image: url("/light_grey.png");
+            background-color: lightgray;
+        }
         .jumbotron {
             background-color: lightskyblue;
-            margin-top: 45px;
-            width: 50%;
+            width: 100%;
+            padding-bottom: 10px;
         }
 
         h1 {
             font-family: cursive;
             font-weight: bold;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+      a, #links, h2 {
+            color: white;
         }
     </style>
 
@@ -46,32 +55,42 @@
             <div class="text-center">
                 <h2 class="text-center">Fill out our survey and find a compatible mate.</h2>
                 <br>
+                <p id="links">
+                    <a href="/api/friends">API Friend Link</a> |
+                    <a href="https://github.com/kspex24/FriendFinder">GitHub Repo</a>
+                  </p>
             </div>
         </div>
 
         <div class="container">
-            <div class="wrapper-content">
+         
 
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row" >
+                    <div class="col-md-5">
                         <form role="form" name="surveyForm">
                             <div class="input-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Smith"required>
-
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Smith" required>
+</div>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-5">
                                 <div class="input-group">
                                     <label for="photo">Photo Link:</label>
-                                    <input type="text" class="form-control" id="photo" na me="photo" required>
+                                    <input type="text" class="form-control" id="photo" name="photo" placeholder="www.linktophoto.jpg" required>
                                 </div>
 
                             </div>
-                    </div>
-                </div>
+                            </div>
+         <br>
+        
                 <div class="row">
-                    <div class="col-md-4">
+                    
+                    <div class="col-md-5">
 
                         <p>1) You are laidback.</p>
                         <select class="form-control select-data" id="response0">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -81,6 +100,7 @@
                         <br>
                         <p>2) You have a great sense of humor.</p>
                         <select class="form-control select-data" id="response1">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -90,6 +110,7 @@
                         <br>
                         <p>3) You enjoy traveling.</p>
                         <select class="form-control select-data" id="response2">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -99,6 +120,7 @@
                         <br>
                         <p>4) You consider yourself to be shy.</p>
                         <select class="form-control select-data" id="response3">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -108,6 +130,7 @@
                         <br>
                         <p>5) You are established in your career.</p>
                         <select class="form-control select-data" id="response4">
+                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -116,10 +139,11 @@
                         </select>
                         <br>
                     </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
                         <p>6) You are open-minded.</p>
                         <select class="form-control select-data" id="response5">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -129,6 +153,7 @@
                         <br>
                         <p>7) You like attending sporting events.</p>
                         <select class="form-control select-data" id="response6">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -138,6 +163,7 @@
                         <br>
                         <p>8) You enjoy outdoor activities and exercise.</p>
                         <select class="form-control select-data" id="response7">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -147,6 +173,7 @@
                         <br>
                         <p>9) You enjoy going to lectures and museums.</p>
                         <select class="form-control select-data" id="response8">
+                             <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -156,6 +183,7 @@
                         <br>
                         <p>10) You enjoy going to restaurants and bars.</p>
                         <select class="form-control select-data" id="response9">
+                            <option value="" selected disabled>Please select an option</option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -163,10 +191,11 @@
                             <option value="5">5 (Strongly Agree)</option>
                         </select>
                     </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit</button>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Submit</button>
                     </form>
-
+                
                     <!-- Modal -->
                     <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -194,6 +223,7 @@
 
 
                 <script type="text/javascript">  
+                $(document).ready(function() {
 
 
       // Form validation code will come here.
@@ -208,13 +238,32 @@
                     }
 
                     document.onkeypress = stopRKey;
+
+                    //validate form to make sure name and photo entered
+
+                                // $('#surveyForm').validate({
+                                //         errorClass: "error",
+                                //         rules:{      
+                                //             'name': {   
+                                //                 required: true,
+                                //                 minlength: 1
+                                //             },
+                                //             'photo': {     
+                                //                 required: true,
+                                //                 minlength: 5
+                                //             }
+                                //         }
+                                        
+                                //         })
+                    
+
                     //Code to save responses from form, post data, show modal with match on click
                     var scoreArray = []
 
                     $("#submit-btn").on("click", function (event) {
                         event.preventDefault();
 
-                        // validateForm()
+                        
 
                         //Store select values in an array
                         var responseVal = $("#response0 option:selected").val()
@@ -241,6 +290,7 @@
 
 
 
+
                         // Store the form elements in a variable to send
                         var newFriend = {
                             name: $("#name").val().trim(),
@@ -259,7 +309,7 @@
                         //   // Clear the form when submitting and empty score array, run function to get all friend data
                         $("#name").val("");
                         $("#photo").val("");
-                        $(".select-data").val("1");
+                        $(".select-data").val("");
                         scoreArray = []
                         matchQuery();
 
@@ -333,8 +383,9 @@
                         $('#matchName').text(matchMate);
                         $("#matchPic").attr("src", matchPic);
                     }
-
+})
                 </script>
+            
 
 </body>
 
