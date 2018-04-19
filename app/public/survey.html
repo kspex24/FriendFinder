@@ -75,7 +75,7 @@
 
                 <div class="row" >
                     <div class="col-md-5">
-                        <form role="form" name="surveyForm">
+                        <form role="form" name="surveyForm" id="form">
                             <div class="input-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Jane Smith" required>
@@ -232,7 +232,7 @@
 
                 <script type="text/javascript">  
             
-
+            $(document).ready(function () {
 
       // Form validation code will come here.
   
@@ -247,35 +247,11 @@
 
                     document.onkeypress = stopRKey;
 
-                    //validate form to make sure name and photo entered
-                    $(document).ready(function () {
-
-                                // $('#surveyForm').validate({
-                                //         errorClass: "error",
-                                //         rules:{      
-                                //             'name': {   
-                                //                 required: true,
-                                //                 minlength: 1
-                                //             },
-                                //             'photo': {     
-                                //                 required: true,
-                                //                 minlength: 5
-                                //             }
-                                //         }
-                                        
-                                //         })  
-
-                    
-
                     //Code to save responses from form, post data, show modal with match on click
                     var scoreArray = []
 
-                    $("#submit-btn").on("click", function (event) {
-                        event.preventDefault();
-
-
-
-                        
+                            $("#form").on('submit',function(e){
+                                e.preventDefault();  
 
                         //Store select values in an array
                         var responseVal = $("#response0 option:selected").val()
@@ -300,10 +276,7 @@
                         scoreArray.push(responseVal)
 
 
-
-
-
-                        // Store the form elements in a variable to send
+                  // Store the form elements in a variable to send
                         var newFriend = {
                             name: $("#name").val().trim(),
                             photo: $("#photo").val().trim(),
@@ -336,8 +309,6 @@
                             .then(function (friendData) {
 
                                 findMatch(friendData)
-
-                                // Loop through and display each of the customers
 
                             });
                     }
