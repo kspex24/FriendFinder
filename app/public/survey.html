@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find a Friend</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   
+</head>
+
+<body>
+    <style>
+        .jumbotron {
+            background-color: lightskyblue;
+            margin-top: 45px;
+            width: 50%;
+        }
+
+        h1 {
+            font-family: cursive;
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="container">
+        <div class="jumbotron">
+
+            <h1 class="text-center">Find a Friend</h1>
+
+            <div class="text-center">
+                <h2 class="text-center">Fill out our survey and find a compatible mate.</h2>
+                <br>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrapper-content">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <form role="form" name="surveyForm">
+                            <div class="input-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Smith"required>
+
+                                <div class="input-group">
+                                    <label for="photo">Photo Link:</label>
+                                    <input type="text" class="form-control" id="photo" na me="photo" required>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <p>1) You are laidback.</p>
+                        <select class="form-control select-data" id="response0">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>2) You have a great sense of humor.</p>
+                        <select class="form-control select-data" id="response1">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>3) You enjoy traveling.</p>
+                        <select class="form-control select-data" id="response2">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>4) You consider yourself to be shy.</p>
+                        <select class="form-control select-data" id="response3">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>5) You are established in your career.</p>
+                        <select class="form-control select-data" id="response4">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p>6) You are open-minded.</p>
+                        <select class="form-control select-data" id="response5">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>7) You like attending sporting events.</p>
+                        <select class="form-control select-data" id="response6">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>8) You enjoy outdoor activities and exercise.</p>
+                        <select class="form-control select-data" id="response7">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>9) You enjoy going to lectures and museums.</p>
+                        <select class="form-control select-data" id="response8">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <p>10) You enjoy going to restaurants and bars.</p>
+                        <select class="form-control select-data" id="response9">
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Submit</button>
+                    </form>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Your New Friend Awaits!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="matchName"></h3>
+                                    <img src="" id="matchPic" height=200px width=175px>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <script type="text/javascript">  
+
+
+      // Form validation code will come here.
+  
+
+                    //function to disable <Enter key> from submitting form 
+
+                    function stopRKey(evt) {
+                        var evt = (evt) ? evt : ((event) ? event : null);
+                        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+                        if ((evt.keyCode == 13) && (node.type == "text")) { return false; }
+                    }
+
+                    document.onkeypress = stopRKey;
+                    //Code to save responses from form, post data, show modal with match on click
+                    var scoreArray = []
+
+                    $("#submit-btn").on("click", function (event) {
+                        event.preventDefault();
+
+                        // validateForm()
+
+                        //Store select values in an array
+                        var responseVal = $("#response0 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response1 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response2 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response3 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response4 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response5 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response6 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response7 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response8 option:selected").val()
+                        scoreArray.push(responseVal)
+                        var responseVal = $("#response9 option:selected").val()
+                        scoreArray.push(responseVal)
+
+
+
+
+                        // Store the form elements in a variable to send
+                        var newFriend = {
+                            name: $("#name").val().trim(),
+                            photo: $("#photo").val().trim(),
+                            scores: (scoreArray)
+
+                        };
+
+                        // Post the data to the api
+
+                        $.post("/api/friends", newFriend,
+                            function (data) {
+
+                            });
+
+                        //   // Clear the form when submitting and empty score array, run function to get all friend data
+                        $("#name").val("");
+                        $("#photo").val("");
+                        $(".select-data").val("1");
+                        scoreArray = []
+                        matchQuery();
+
+                    });
+
+// Run function to get all friend data  for access to find a match
+                    function matchQuery() {
+                        var currentURL = window.location.origin;
+
+                        // The AJAX function uses the URL of our API to GET the data associated with it then run function to fund match with new user
+                        $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+                            .then(function (friendData) {
+
+                                findMatch(friendData)
+
+                                // Loop through and display each of the customers
+
+                            });
+                    }
+
+                    //Function to find a match
+                    function findMatch(friendData) {
+
+                        //Calculate index number for current user (subtract 1 from object length) and set variable for user's score array, declare match array
+
+                        z = (friendData.length - 1);
+                        b = friendData[z].scores;
+                        match = [];
+                        //Compare to each user's scores and send differences to a new array 
+                        for (var i = 0; i < z; i++) {
+                            x = [];
+                            a = friendData[i].scores
+
+                            for (var j = 0; j <= b.length - 1; j++) {
+
+                                x.push(Math.abs(a[j] - b[j]));
+
+                            }
+                            //Take the sum of each total difference array
+
+                            var totalDiff = 0;
+                            for (var k = 0; k < x.length; k++) {
+                                totalDiff += x[k]
+                            }
+
+                            match.push(totalDiff)
+                            console.log("a: " + a);
+                            console.log("b: " + b);
+                            console.log("x: " + x);
+                            console.log("Diff: " + totalDiff);
+                            console.log("match array: " + match)
+                        }
+
+                        //Find the lowest total difference and its index number -- find a match using the index number
+                        var newMatch = Math.min(...match)
+                        console.log("match: " + newMatch)
+
+
+                        idx = match.indexOf(Math.min.apply(null, match))
+
+
+                        var matchMate = friendData[idx].name
+                        var matchPic = friendData[idx].photo
+
+                        console.log(idx)
+
+                        console.log(matchMate + ", " + matchPic)
+
+                       //Display modal with name and picture of match
+                        $('#myModal').modal('show');
+                        $('#matchName').text(matchMate);
+                        $("#matchPic").attr("src", matchPic);
+                    }
+
+                </script>
+
+</body>
+
+</html>
