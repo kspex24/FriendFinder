@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find a Friend</title>
 
-    
-   <!-- Latest compiled and minified CSS & JS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--     
+   <!- Latest compiled and minified CSS & JS -->
+  
    <script src="https://code.jquery.com/jquery.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
 
    
 </head>
@@ -241,20 +242,6 @@
 
                     //validate form to make sure name and photo entered
 
-                                // $('#surveyForm').validate({
-                                //         errorClass: "error",
-                                //         rules:{      
-                                //             'name': {   
-                                //                 required: true,
-                                //                 minlength: 1
-                                //             },
-                                //             'photo': {     
-                                //                 required: true,
-                                //                 minlength: 5
-                                //             }
-                                //         }
-                                        
-                                //         })
                     
 
                     //Code to save responses from form, post data, show modal with match on click
@@ -263,6 +250,22 @@
                     $("#submit-btn").on("click", function (event) {
                         event.preventDefault();
 
+
+
+                                $('#surveyForm').validate({
+                                        errorClass: "error",
+                                        rules:{      
+                                            'name': {   
+                                                required: true,
+                                                minlength: 1
+                                            },
+                                            'photo': {     
+                                                required: true,
+                                                minlength: 5
+                                            }
+                                        }
+                                        
+                                        })  
                         
 
                         //Store select values in an array
